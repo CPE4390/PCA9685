@@ -42,10 +42,8 @@
 #define PCA9685_LED14_BASE_REG   0x3e
 #define PCA9685_LED15_BASE_REG   0x42
 
-#define PCA9685_ALL_LED_ON_L_REG    0xfa
-#define PCA9685_ALL_LED_ON_H_REG    0xfb
-#define PCA9685_ALL_LED_OFF_L_REG   0xfc
-#define PCA9685_ALL_LED_OFF_H_REG   0xfd
+#define PCA9685_ALL_LED_BASE_REG 0xfa
+
 #define PCA9685_PRESCALE_REG    0x0fe
 
 //ouput enable pin
@@ -86,7 +84,11 @@ void PCA9685ReadData(unsigned char reg, char *data, char count);
 void PCA9685SetPWMFrequency(unsigned int freq);
 int PCA9685GetPWMFrequency(void);
 void PCA9685SetPWMOutput(char output, int onValue, int offValue);
+void PCA9685SetPWMOn(char output);
+void PCA9685SetPWMOff(char output);
 void PCA9685SetAllPWM(int onValue, int offValue);
+void PCA9685SetAllPWMOn(void);
+void PCA9685SetAllPWMOff(void);
 void PCA9685Sleep(void);
 void PCA9685Wake(void);
 void PCA9685Restart(void);

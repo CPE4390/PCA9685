@@ -20,8 +20,8 @@ void main(void) {
     PCA9685Init();
     PCA9685SetPWMFrequency(1000);
     PCA9685Wake();
-    PCA9685SetPWMOutput(1, 0, 4000);
     PCA9685OuputEnable();
+    PCA9685SetPWMOutput(1, 0, 2000);
     int end = 0;
     while (1) {
         PCA9685SetPWMOutput(0, 0, end);
